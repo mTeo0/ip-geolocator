@@ -5,8 +5,8 @@ const readline = require('readline').createInterface({
     output: process.stdout
   });
   
-  readline.question('Please type an ip adress: ', name => {
-    https.get("https://ipinfo.io/"+ name +"/json", res => {
+  readline.question('Please type an ip adress: ', ip => {
+    https.get("https://ipinfo.io/"+ ip +"/json", res => {
     let data = [];
     console.log('Status code: ',res.statusCode);
     res.on('data', chunk => {
